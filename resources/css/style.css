@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -106,7 +106,35 @@ h2:after {
     margin-bottom: 10px;
 }
 
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+/*    secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
 
+
+/*----- GENERIC LINKS -----*/
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
 
 /*----- BUTTONS -----*/
 .btn:link, 
@@ -290,7 +318,10 @@ header {
     margin-right: 25px;
 }
 
-
+.btn-app:link,
+.btn-app:visited {
+    border-bottom: 0;
+}
 
 .btn-app img {
     height: 50px;
@@ -299,10 +330,64 @@ header {
 }
 
 
+/* ----------------------------------- */
+/* CITIES */
+/* ----------------------------------- */
+.section-cities {
+/*    padding: 0;*/
+/*    margin-left: -300px;*/
+/*    margin-right: -100px;*/
+    
+}
+
+/*
+.meals-showcase {
+    list-style-type: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%
+}
+*/
+
+/*
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+*/
+
+.section-cities img {
+/*    opacity: 0.7;*/
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+/*
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+*/
+}
+
+/*
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+*/
 
 
+.city-feature {
+    margin-bottom: 5px;
+}
 
-
+.city-feature {
+    
+}
 
 
 
