@@ -8,7 +8,7 @@
 
     // Check the data.
     if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: https://omnifood-build-responsive-sites-udemy.vercel.app/index.php?success=-1#form");
+        header("Location: https://omnifood-build-responsive-sites-udemy.vercel.app/api/index.php?success=-1#form");
         exit;
     }
 
@@ -30,5 +30,5 @@
     mail($recipient, $subject, $email_content, $email_headers);
 
     // Redirect to the index.html page with success code
-    header("Location: https://omnifood-build-responsive-sites-udemy.vercel.app/index.php?success=1#form")    
+    header("Location: https://omnifood-build-responsive-sites-udemy.vercel.app/api/index.php?success=1#form")    
 ?>
