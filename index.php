@@ -25,19 +25,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
 </head>
 
 
 
 <body>
-
     <header>
         <nav>
             <div class="row">
@@ -62,48 +54,38 @@
             <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
             <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
         </div>
-
     </header>
+
 
     <section class="section-features js--section-features" id="features">
         <div class="row">
             <h2>Get food fast &mdash; not fast food</h2>
             <p class="long-copy">Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!</p>
         </div>
-
         <div class="row js--wp-1">
             <div class="col span-1-of-4 box">
                 <ion-icon name="infinite-outline" class="icon-big"></ion-icon>
                 <h3>Up to 365 days/year</h3>
                 <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
             </div>
-
-
-
             <div class="col span-1-of-4 box">
                 <ion-icon name="stopwatch-outline" class="icon-big"></ion-icon>
                 <h3>Ready in 20 minutes</h3>
                 <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
             </div>
-
-
-
             <div class="col span-1-of-4 box">
                 <ion-icon name="nutrition-outline" class="icon-big"></ion-icon>
                 <h3>100% organic</h3>
                 <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
             </div>
-
-
-
             <div class="col span-1-of-4 box">
                 <ion-icon name="cart-outline" class="icon-big"></ion-icon>
                 <h3>Order anything</h3>
                 <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
             </div>
         </div>
-
     </section>
+
 
     <section class="section-meals">
         <ul class="meals-showcase clearfix">
@@ -127,10 +109,7 @@
                     <img src="resources/img/4.jpg" alt="Autumn pumpkin soup">
                 </figure>
             </li>
-
         </ul>
-
-
         <ul class="meals-showcase clearfix">
             <li>
                 <figure class="meal-photo">
@@ -152,10 +131,9 @@
                     <img src="resources/img/8.jpg" alt="Granola with cherries and strawberries">
                 </figure>
             </li>
-
         </ul>
-
     </section>
+
 
     <section class="section-steps" id="works">
         <div class="row">
@@ -178,13 +156,12 @@
                     <div>3</div>
                     <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                 </div>
-
                 <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
                 <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
             </div>
         </div>
-
     </section>
+
 
     <section class="section-cities" id="cities">
         <div class="row">
@@ -206,8 +183,6 @@
                     <ion-icon name="logo-twitter" class="icon-small"></ion-icon>
                     <a href="#">@omnifood_lx</a>
                 </div>
-
-
             </div>
             <div class="col span-1-of-4 box">
                 <img src="resources/img/san-francisco.png" alt="San Francisco">
@@ -257,11 +232,9 @@
                     <a href="#">@omnifood_london</a>
                 </div>
             </div>
-
-
         </div>
-
     </section>
+
 
     <section class="section-testimonials">
         <div class="row">
@@ -274,7 +247,6 @@
                     <cite><img src="resources/img/customer-1.jpg" alt="Customer 1 photo">Alberto Duncan</cite>
                 </blockquote>
             </div>
-
             <div class="col span-1-of-3">
                 <blockquote>
                     Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
@@ -289,8 +261,8 @@
                 </blockquote>
             </div>
         </div>
-
     </section>
+
 
     <section class="section-plans js--section-plans" id="plans">
         <div class="row">
@@ -382,16 +354,26 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <section class="section-form">
+
+    <section class="section-form" id="form">
         <div class="row">
             <h2>We're happy to hear from you</h2>
         </div>
+
         <div class="row">
-            <form method="post" action="#" class="contact-form">
+            <form method="post" action="mailer.php" class="contact-form">
+                <div class="row">
+                    <?php
+                        if($_GET['success'] == 1) {
+                            echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                        }
+                        if($_GET['success'] == -1) {
+                            echo "<div class=\"form-messages error\">Oops! Something went wrong. Please try again!</div>";
+                        }
+               ?>
+                </div>
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label for="name">Name</label>
@@ -437,7 +419,6 @@
                         <textarea name="message" placeholder="Your message"></textarea>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label>&nbsp;</label>
@@ -450,6 +431,7 @@
             </form>
         </div>
     </section>
+
 
     <footer>
         <div class="row">
@@ -484,11 +466,9 @@
                 Copyright &copy; 2020 by Omnifood. All rights reserved.
             </p>
         </div>
-
     </footer>
 
     <!--    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> ion icons script-->
-
     <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
@@ -508,19 +488,6 @@
         gtag('config', 'G-L858R4C7YZ');
 
     </script>
-
 </body>
-
-
-<!--
-
-
--->
-
-
-
-
-
-
 
 </html>
